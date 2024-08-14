@@ -1,0 +1,208 @@
+body {
+  background-color: pink;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 68px;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.header__wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 22px;
+  height: 100%;
+  gap: 20px;
+}
+
+.nav {
+  flex: 1;
+  height: 100%;
+}
+.nav__right {
+  display: flex;
+  gap: 16px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.menu__1depth {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+.menu__1depth > span {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: default;
+}
+.menu__1depth > span:hover {
+  opacity: 0.8;
+}
+.menu__1depth:hover > span {
+  opacity: 0.8;
+}
+.menu__1depth:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #F6F9FB;
+}
+.menu__1depth:hover .menu__2depth {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s;
+}
+.menu__2depth {
+  position: absolute;
+  top: 68px;
+  left: -100px;
+  border-radius: 8px;
+  display: flex;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  max-width: 960px;
+  transition: all 0.3s;
+}
+.menu__2depth .menu-list {
+  background-color: #F6F9FB;
+}
+.menu__2depth .menu-list__left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+  flex: 1;
+}
+.menu__2depth .menu-list__left .menu-list__section {
+  width: 610px;
+}
+.menu__2depth .menu-list__section {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 8px;
+}
+.menu__2depth .menu-list__title {
+  color: #17314A;
+  margin-bottom: 18px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.menu__2depth .menu-list__list-wrap {
+  display: flex;
+}
+.menu__2depth .menu-list__list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu__2depth .menu-list__list--non-icon {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  width: 214px;
+  margin: 14px 0 0 44px;
+}
+.menu__2depth .menu-list__list .list {
+  display: flex;
+  flex-direction: column;
+}
+.menu__2depth .menu-list__list dl {
+  display: flex;
+  gap: 10px;
+}
+.menu__2depth .menu-list__list dl dt .icon-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #F6F9FB;
+  border-radius: 8px;
+}
+.menu__2depth .menu-list__list dl dt svg {
+  width: 16px;
+  height: 16px;
+}
+.menu__2depth .menu-list__list dl dt .icon-only svg path {
+  fill: #88add2;
+}
+.menu__2depth .menu-list__list dl dd {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.menu__2depth .menu-list__list dl dd .title {
+  color: #0A2540;
+  font-size: 14px;
+  font-weight: 600;
+}
+.menu__2depth .menu-list__list dl dd .desc {
+  color: #A9B3BC;
+  font-size: 14px;
+}
+.menu__2depth .menu-list__list dl:hover .icon-only svg path {
+  fill: #0a2540;
+}
+.menu__2depth .menu-list__list dl:hover .desc {
+  color: #4B5661;
+}
+.menu__2depth .menu-list__list .non-icon {
+  padding: 10px 8px;
+  background-color: #F6F9FB;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.menu__2depth .menu-list__right {
+  padding: 32px 26px;
+  width: 200px;
+}
+.menu__2depth .menu-list__right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 22px;
+}
+.menu__2depth .menu-list__right ul li > a {
+  display: flex;
+  flex-direction: column;
+}
+.menu__2depth .menu-list__right ul li > a .title {
+  font-size: 14px;
+  font-weight: 600;
+}
+.menu__2depth .menu-list__right ul li > a .desc {
+  font-size: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0);
+  transition: all 0.3s;
+}
+.menu__2depth .menu-list__right ul li:hover > a .desc {
+  display: inline-block;
+  margin-bottom: 8px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(50%);
+  transition: all 0.3s;
+}/*# sourceMappingURL=style.css.map */

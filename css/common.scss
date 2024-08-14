@@ -1,0 +1,20 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+
+  &__txt + &__icon {
+    padding-left: 4.5px;
+  }
+
+  &__transparent {
+    background-color: transparent;
+
+    &--white {
+      color: #FFFFFF;
+    }
+  }
+
+
+}

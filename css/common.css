@@ -1,0 +1,15 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+}
+.btn__txt + .btn__icon {
+  padding-left: 4.5px;
+}
+.btn__transparent {
+  background-color: transparent;
+}
+.btn__transparent--white {
+  color: #FFFFFF;
+}/*# sourceMappingURL=common.css.map */
